@@ -4,3 +4,24 @@
   <button (click)="increase()">Tăng</button>
   <button (click)="decrease()">Giảm</button>
 </div>
+<div>
+    <h2>Các loại trái cây</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>STT</th>
+    <td>tên </td>
+    <td>giá</td>
+   
+  </tr>
+  <tr *ngFor="let trai of traiCay1; let i =index">
+    <td>{{ i+1 }}</td>
+    <td>{{ trai.ten }}</td>
+    <td>
+      <span [ngClass]="{'so-am': trai.gia < 0, 'so-duong': trai.gia >= 0}">
+        {{ trai.gia }}
+      </span>
+    </td>
+  </tr>
+</table>
+</div>
