@@ -24,4 +24,11 @@
     </td>
   </tr>
 </table>
+
+<select name="cities" id="cities">
+  <option *ngFor="let city of cities" [value]="city.city">{{ city.city }}</option>
+</select>
+<select name="districts" id="districts">
+  <option *ngFor="let district of cities[0].district" [value]="district">{{ district }}</option>
+</select>
 </div>
